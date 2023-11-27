@@ -77,7 +77,7 @@ nav ul li:last-child {
 }
 
 .M-box {
-  width: 30%;
+  /* width: 30%; */
   height: 100%;
 }
 
@@ -396,11 +396,11 @@ section#articles{
 
 }
 .M-box{
-    height: 500px;
+    height: 470px;
     width: 600px;
 
     position: absolute;
-    top: -20px;
+    top: 0px;
     right:20px;
 }
 
@@ -424,6 +424,9 @@ section#articles{
 }
 
 @media screen and (max-width: 900px){
+    .M-box{
+        height: 456px;
+    top: 0;}
     h1{
         font-size: 6rem;
         letter-spacing: -0.25rem;
