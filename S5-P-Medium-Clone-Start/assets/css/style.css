@@ -33,7 +33,7 @@ header img{
   max-width: 1200px;
   margin: auto;
   height: 100%;
-  padding: 0 50px;
+  padding: 0 30px;
 }
 
 
@@ -98,7 +98,8 @@ h1 {
   letter-spacing: -0.5rem;
 }
 
-h2 {
+h1 + h2 {
+    width: 450px;
   font-size: 1.5rem;
   padding-top: 1.5rem;
 }
@@ -127,10 +128,14 @@ h2 {
   width: 100%;
  }
 
-
  @media screen and (max-width: 1300px){
+    .center-container{
+        padding: 0 3rem;
+ }}
+
+ @media screen and (max-width: 1250px){
     .title-box{
-        margin-left: 50px;
+        margin-left: 30px;
     }
  }
 
@@ -148,8 +153,9 @@ h2 {
 ------------------------------------------------*/
 
 section#trending{
-    margin: 0 3rem;
+    margin: 0;
     padding: 0;
+    width: 100%;
 }
 
 section#trending h3{
@@ -208,7 +214,7 @@ section#trending .article-date{
 }
 
 section#trending .article-info{
-    padding: 0 2rem
+    padding: 0 3rem 0 1rem;
 }
 
 section#trending .articles{
@@ -299,7 +305,7 @@ section#articles{
     padding: 0.5rem;
     border-radius: 2rem ;
 }
-.bottom-container .article-date{
+.bottom-container .article-date div{
     display: flex;
     align-items: center;
 }
@@ -312,10 +318,13 @@ section#articles{
     margin-left: 0.3rem;
 }
 
-div.yellow{
-
-
+.bottom-container .article-date img,
+.bottom-container .article-date span,
+.bottom-container .article-title,
+aside .topics-footer li{
+    cursor: pointer;
 }
+
 
 /*------------------------------------------------
 ------------------ASIDE-------------------------
@@ -338,10 +347,11 @@ aside .topics-container ul{
     display: flex;flex-wrap: wrap;
 }
 aside .topics-container li{
+    font-size: 0.9rem;
     list-style: none;
     background-color: #efefef;
     margin: 0.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1rem;
     border-radius: 3rem ;
     cursor: pointer;
 }
@@ -408,12 +418,18 @@ section#articles{
     section#trending article{
         width: 45%;
     }
+    section#articles{
+        margin-top: 3rem;
+    }
 }
 
 @media screen and (max-width: 900px){
     h1{
         font-size: 6rem;
         letter-spacing: -0.25rem;
+    }
+    h1 + h2{
+        width: 400px;
     }
     aside{
         width: 100%;
@@ -426,6 +442,10 @@ section#articles{
     }
     .bottom-container{
         flex-direction: column-reverse;
+        
+    }
+    .M-box{
+        right: -100px;
     }
 }
 
@@ -444,11 +464,42 @@ section#articles{
     div.article-preview{
         display: none;
     }
-
+    section#articles{
+        margin-top: 3rem;
+    }
     section#articles .article-title{
         font-size: 1rem;
     }
+    .center-container{
+        padding: 0 1rem;
+ }
+ section#articles article .article-info{
+    padding: 0 1rem !important;
+ }
 }
 @media screen and (max-width: 550px){
+    h1{
+        font-size: 4.5rem;}
+    .bottom-container article .article-img img{
+        /* overflow: hidden;         */
+       aspect-ratio: 1;
+    }
+    section#articles{
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .bottom-container{
+        padding-left: 0.8rem;
+        padding-right: 0.8rem ;
+    }
 
+
+    .bottom-container article .article-img{
+        height: 100px;
+        width: 100px;
+        padding: 0;
+    }
+    nav li:nth-child(4){
+        display: none;
+    }
 }
