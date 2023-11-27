@@ -1,0 +1,177 @@
+@import url("https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+html {
+  font-size: 1em;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #191919;
+}
+header {
+  background-color: #ffc017;
+  height: 4.75rem;
+  border-bottom: 1px solid #191919;
+}
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+  height: 100%;
+}
+/*
+
+#1a8917; */
+nav ul li {
+  font-size: 0.9rem;
+  font-weight: 400;
+  display: inline-block;
+  margin: 0 0.75rem;
+  text-align: center;
+}
+
+nav ul li:last-child {
+  color: #fff;
+  background-color: #191919;
+  padding: 0.8rem 1.3rem;
+  border-radius: 2rem;
+  font-weight: 400;
+}
+
+.yellow {
+  background-color: #ffc017;
+}
+
+.M-box {
+  width: 30%;
+  height: 100%;
+}
+
+.title-box {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+h1 {
+  font-family: "Spectral", serif;
+  font-size: 7rem;
+  font-weight: 400;
+  padding-top: 5.5rem;
+  letter-spacing: -0.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  padding-top: 1.5rem;
+}
+
+.title-box button {
+  color: #fff;
+  background-color: #191919;
+  display: inline-block;
+  width: 13rem;
+  padding: 0.6rem 1.8rem;
+  border: none;
+  font-size: 1.3rem;
+  border-radius: 3rem;
+  margin: 3.5rem 0 5.5rem 0;
+}
+.title-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.title-box{
+
+    display: flex;     justify-content: space-between;
+
+}
+
+.center-container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+/*------------------------------------------------
+------------------TRENDING----------------------
+------------------------------------------------*/
+
+section#trending h3{
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ font-weight: 600;
+ margin-top: 2.5rem;
+}
+
+section#trending h3::before{
+    content: url('../imgs/svg/trending.svg');
+    padding-right: 1rem;
+
+}
+
+section#trending article{
+    display: flex;
+    width: 33%;
+    padding: 1rem 0;
+
+}
+
+section#trending .article-number{
+    font-size: 2rem;
+    font-weight: 500;
+    color: #dbdbdb;
+    }
+    
+section#trending .article-author{
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+}
+section#trending .article-author img{
+    border-radius: 50%;
+    width: 1.5rem;
+    margin-right: 0.3rem;
+}
+
+section#trending .article-author span{
+    color: #767676;
+}
+
+section#trending .article-title{
+    font-size: 1rem;
+    font-weight: 1000;
+    padding: 0.9rem 0;
+}
+section#trending .article-date{
+    font-size: 0.8rem;
+    color: rgb(84, 84, 84);
+    display: flex;
+    align-items: center;
+}
+
+section#trending .article-info{
+    padding: 0 2rem
+}
+
+section#trending .articles{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+
+section#trending .article-date::after{
+    content: url('../imgs/svg/star.svg');
+    cursor: pointer;
+    margin-left: 0.3rem;
+}
