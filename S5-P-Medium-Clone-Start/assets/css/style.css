@@ -8,11 +8,18 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   color: #191919;
+  
 }
 header {
+    width: 100%;
   background-color: #ffc017;
   height: 4.75rem;
   border-bottom: 1px solid #191919;
+  position: fixed;
+  top: 0; 
+  left:0;
+  z-index: 1;
+
 }
 .nav-container {
   display: flex;
@@ -22,15 +29,33 @@ header {
   margin: auto;
   height: 100%;
 }
-/*
 
-#1a8917; */
+
+main{
+    position: absolute;
+    width: 100%;
+    top: 4.75rem
+}
 nav ul li {
   font-size: 0.9rem;
   font-weight: 400;
   display: inline-block;
   margin: 0 0.75rem;
   text-align: center;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #191919;
+}
+
+nav ul li:last-of-type a:visited{
+    text-decoration: none;
+    color: #fff;
+}
+nav ul li a:visited{
+    text-decoration: none;
+    color: #191919;
 }
 
 nav ul li:last-child {
@@ -100,9 +125,16 @@ h2 {
     max-width: 1200px;
     margin: 0 auto;
 }
+
+
+
 /*------------------------------------------------
 ------------------TRENDING----------------------
 ------------------------------------------------*/
+
+section#trending{
+    padding-bottom: 2rem;
+}
 
 section#trending h3{
  display: flex;
@@ -170,8 +202,159 @@ section#trending .articles{
 
 }
 
-section#trending .article-date::after{
+section#trending article:nth-child(2) .article-date::after, section#trending article:last-child .article-date::after{
     content: url('../imgs/svg/star.svg');
     cursor: pointer;
     margin-left: 0.3rem;
+}
+
+#line{
+    width: 100%;
+    height: 1px;
+    background-color: rgb(221, 221, 221);
+}
+/*------------------------------------------------
+------------------ARTICLES----------------------
+------------------------------------------------*/
+.bottom-container{
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 4rem;
+    justify-content: space-between;
+    position: relative;
+
+
+}
+
+.bottom-container article{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 3rem;
+}
+section#articles{
+    width: 85%;
+}
+.bottom-container article .article-info{
+    width: 70%;
+}
+.bottom-container .article-img{
+    width: 200px;
+    padding-left: 2rem;
+}
+.bottom-container .article-img img{
+    width: 100%;
+}
+
+.bottom-container .article-author img{
+    border-radius: 50%;
+    width: 1.4rem;
+    margin-right: 0.5rem;
+}
+.bottom-container .article-author{
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    font-size: 0.8rem;
+
+}
+
+.bottom-container .article-title{
+    font-size: 1.3rem;
+    font-weight: 1000;
+    margin-top: 0.6rem;
+}
+.bottom-container .article-preview{
+    color: rgb(105, 105, 105);
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+}
+.bottom-container .article-date{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgb(105, 105, 105);
+}
+
+.bottom-container .article-date span{
+    background-color: #efefef;
+    padding: 0.5rem;
+    border-radius: 2rem ;
+}
+.bottom-container .article-date{
+    display: flex;
+    align-items: center;
+}
+
+.bottom-container article:nth-child(2) .article-date::after,
+.bottom-container article:nth-child(4) .article-date::after,
+.bottom-container article:nth-child(5) .article-date::after{
+    content: url('../imgs/svg/star.svg');
+    cursor: pointer;
+    margin-left: 0.3rem;
+}
+
+
+
+/*------------------------------------------------
+------------------ASIDE-------------------------
+------------------------------------------------*/
+aside{
+width: 30%;
+height: 500px;
+ position: sticky;
+ top: 100px;
+}
+
+aside h3{
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+aside .topics-container{
+    display: flex;
+}
+aside .topics-container ul{
+    display: flex;flex-wrap: wrap;
+}
+aside .topics-container li{
+    list-style: none;
+    background-color: #efefef;
+    margin: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 3rem ;
+    cursor: pointer;
+}
+aside p{
+    color: #1a8917;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgb(215, 215, 215) ;
+    cursor: pointer;
+}
+
+aside .topics-footer{
+    padding-top: 2rem;
+
+}
+aside .topics-footer ul{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+}
+aside .topics-footer li{
+    list-style: none;
+    font-size: 0.9rem;
+    margin: 0.5rem 1rem 0.5rem 0;
+    color: rgb(105, 105, 105);
+}
+.center-container:last-child{
+    display: flex;
+    width: 70%;
+} 
+.bottom-container{
+
+}
+section#articles{
+    width: 60%;
 }
