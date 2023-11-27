@@ -13,3 +13,22 @@ document.addEventListener('scroll', () => {
         button.style.backgroundColor = '#191919'
     }
 })
+
+
+let allM = document.querySelectorAll('svg path');
+
+ console.log(allM);
+
+setInterval( () => {
+    let random = Math.floor(Math.random() * 273);
+    // console.log(allM[random]);
+    allM[random].style.opacity = 0;
+    allM[random].style.transition = 'opacity 0.5s linear';
+
+    setTimeout( () => {
+        allM[random].style.opacity = 1;
+        allM[random].style.transition = 'opacity 0.5s linear';
+    }, 1000)
+
+
+}, 100)

@@ -20,6 +20,11 @@ header {
   left:0;
   z-index: 1;
 
+
+
+}
+header img{
+    /* padding-left: 50px ; */
 }
 .nav-container {
   display: flex;
@@ -28,6 +33,7 @@ header {
   max-width: 1200px;
   margin: auto;
   height: 100%;
+  padding: 0 50px;
 }
 
 
@@ -81,6 +87,7 @@ nav ul li:last-child {
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
+
 }
 
 h1 {
@@ -110,20 +117,28 @@ h2 {
 .title-container{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .title-box{
+  justify-content: space-between;
+  width: 100%;
+ }
 
-    display: flex;     justify-content: space-between;
 
-}
+ @media screen and (max-width: 1300px){
+    .title-box{
+        margin-left: 50px;
+    }
+ }
 
-.center-container{
+.center-container.yellow{
     max-width: 1200px;
     margin: 0 auto;
+    /* width:100%; */
+    /* padding-left: 50px; */
 }
 
 
@@ -133,7 +148,8 @@ h2 {
 ------------------------------------------------*/
 
 section#trending{
-    padding-bottom: 2rem;
+    margin: 0 3rem;
+    padding: 0;
 }
 
 section#trending h3{
@@ -152,7 +168,7 @@ section#trending h3::before{
 
 section#trending article{
     display: flex;
-    width: 33%;
+    width: 33.33%;
     padding: 1rem 0;
 
 }
@@ -199,6 +215,7 @@ section#trending .articles{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    width: 100%;
 
 }
 
@@ -223,6 +240,7 @@ section#trending article:nth-child(2) .article-date::after, section#trending art
     margin-top: 4rem;
     justify-content: space-between;
     position: relative;
+    padding: 0 3rem;
 
 
 }
@@ -286,15 +304,18 @@ section#articles{
     align-items: center;
 }
 
-.bottom-container article:nth-child(2) .article-date::after,
-.bottom-container article:nth-child(4) .article-date::after,
-.bottom-container article:nth-child(5) .article-date::after{
+.bottom-container article:nth-child(2) .article-date div::after,
+.bottom-container article:nth-child(4) .article-date div::after,
+.bottom-container article:nth-child(5) .article-date div::after{
     content: url('../imgs/svg/star.svg');
     cursor: pointer;
     margin-left: 0.3rem;
 }
 
+div.yellow{
 
+
+}
 
 /*------------------------------------------------
 ------------------ASIDE-------------------------
@@ -303,7 +324,7 @@ aside{
 width: 30%;
 height: 500px;
  position: sticky;
- top: 100px;
+ top: 120px;
 }
 
 aside h3{
@@ -352,9 +373,82 @@ aside .topics-footer li{
     display: flex;
     width: 70%;
 } 
-.bottom-container{
 
-}
 section#articles{
     width: 60%;
+    padding-left: 1rem;
+}
+.center-container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+.M-box{
+    height: 500px;
+    width: 600px;
+
+    position: absolute;
+    top: -20px;
+    right:20px;
+}
+
+
+#articles .article-date{
+    display: flex;
+    justify-content: space-between;  
+}
+
+
+
+
+
+@media screen and (max-width: 1200px){
+    section#trending article{
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    h1{
+        font-size: 6rem;
+        letter-spacing: -0.25rem;
+    }
+    aside{
+        width: 100%;
+        order: 1;
+        position: static;
+        height: auto;
+    }
+    section#articles{
+        width: 100%;
+    }
+    .bottom-container{
+        flex-direction: column-reverse;
+    }
+}
+
+@media screen and (max-width: 730px){
+    .M-box svg{
+        display: none;
+    }
+    nav li:nth-child(1),
+    nav li:nth-child(2),
+    nav li:nth-child(3){
+        display: none;
+    }
+    section#trending article{
+        width: 100%;
+    }
+    div.article-preview{
+        display: none;
+    }
+
+    section#articles .article-title{
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 550px){
+
 }
